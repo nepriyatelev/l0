@@ -1,0 +1,53 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - db-network
+      - nats-network
+    depends_on:
+      db:
+        condition: service_healthy
+
+  nats:
+    image: nats-streaming:0.25.5
+    restart: always
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: ["--cluster_id", "wb-cluster"]
+    networks:
+      - nats-network
+
+  db:
+    image: postgres:15
+    restart: always
+#    ports:
+#      - "5432:5432"
+    environment:
+      POSTGRES_USER: wbUser
+      POSTGRES_PASSWORD: wb
+      POSTGRES_DB: wbDb
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U wbUser -d wbDb" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - db-network
+    volumes:
+      - wb-postgres-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/create_tables.sql
+
+networks:
+  db-network:
+    driver: bridge
+  nats-network:
+    driver: bridge
+
+volumes:
+    wb-postgres-data:

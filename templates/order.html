@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Details</title>
+</head>
+<body>
+<h1>Order Details</h1>
+<p>Order ID: {{.OrderUID}}</p>
+<p>Track Number: {{.TrackNumber}}</p>
+<p>Entry: {{.Entry}}</p>
+<p>Locale: {{.Locale}}</p>
+<p>Internal Signature: {{.InternalSig}}</p>
+<p>Customer ID: {{.CustomerID}}</p>
+<p>Delivery Service: {{.DeliveryService}}</p>
+<p>Shard Key: {{.ShardKey}}</p>
+<p>Sm ID: {{.SmID}}</p>
+<p>Date Created: {{.DateCreated}}</p>
+<p>Oof Shard: {{.OofShard}}</p>
+
+<h2>Delivery Details</h2>
+<p>Name: {{.Delivery.Name}}</p>
+<p>Phone: {{.Delivery.Phone}}</p>
+<p>Zip: {{.Delivery.Zip}}</p>
+<p>City: {{.Delivery.City}}</p>
+<p>Address: {{.Delivery.Address}}</p>
+<p>Region: {{.Delivery.Region}}</p>
+<p>Email: {{.Delivery.Email}}</p>
+
+<h2>Payment Details</h2>
+<p>Transaction: {{.Payment.Transaction}}</p>
+<p>Request ID: {{.Payment.RequestID}}</p>
+<p>Currency: {{.Payment.Currency}}</p>
+<p>Provider: {{.Payment.Provider}}</p>
+<p>Amount: {{.Payment.Amount}}</p>
+<p>Payment Dt: {{.Payment.PaymentDt}}</p>
+<p>Bank: {{.Payment.Bank}}</p>
+<p>Delivery Cost: {{.Payment.DeliveryCost}}</p>
+<p>Goods Total: {{.Payment.GoodsTotal}}</p>
+<p>Custom Fee: {{.Payment.CustomFee}}</p>
+
+<h2>Items</h2>
+<table>
+    <tr>
+        <th>Chrt ID</th>
+        <th>Track Number</th>
+        <th>Price</th>
+        <th>Rid</th>
+        <th>Name</th>
+        <th>Sale</th>
+        <th>Size</th>
+        <th>Total Price</th>
+        <th>Nm ID</th>
+        <th>Brand</th>
+        <th>Status</th>
+    </tr>
+    {{range .Items}}
+    <tr>
+        <td>{{.ChrtID}}</td>
+        <td>{{.TrackNumber}}</td>
+        <td>{{.Price}}</td>
+        <td>{{.Rid}}</td>
+        <td>{{.Name}}</td>
+        <td>{{.Sale}}</td>
+        <td>{{.Size}}</td>
+        <td>{{.TotalPrice}}</td>
+        <td>{{.NmID}}</td>
+        <td>{{.Brand}}</td>
+        <td>{{.Status}}</td>
+    </tr>
+    {{end}}
+</table>
+
+</body>
+</html>

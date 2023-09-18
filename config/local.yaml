@@ -1,0 +1,8 @@
+storage_connect_string: "host=db port=5432 dbname=wbDb user=wbUser password=wb sslmode=disable"
+http_server:
+  host: ""
+  port: "8080"
+broker:
+  cluster_id: "wb-cluster"
+  client_id: "wb-client"
+  url: "nats://nats:4222"

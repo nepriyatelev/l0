@@ -1,0 +1,75 @@
+{
+  "order_uid": "e",
+  "track_number": "w",
+  "entry": "q",
+  "delivery": {
+    "name": "e",
+    "phone": "q",
+    "zip": "w",
+    "city": "w",
+    "address": "  15",
+    "region": "w",
+    "email": "test@.com"
+  },
+  "payment": {
+    "transaction": "w",
+    "request_id": "q",
+    "currency": "USD",
+    "provider": "e",
+    "amount": 1817,
+    "payment_dt": 32,
+    "bank": "alpha",
+    "delivery_cost": 1500,
+    "goods_total": 317,
+    "custom_fee": 0
+  },
+  "items": [
+    {
+      "chrt_id": 9134930,
+      "track_number": "WBILMTESTTRACK",
+      "price": 453,
+      "rid": "ab4219087a764ae0btest",
+      "name": "Mascaras",
+      "sale": 30,
+      "size": "0",
+      "total_price": 317,
+      "nm_id": 2389212,
+      "brand": "Vivienne Sabo",
+      "status": 202
+    },
+    {
+      "chrt_id": 1234567,
+      "track_number": "WB1234567",
+      "price": 789,
+      "rid": "cd567890ef12345",
+      "name": "Perfume",
+      "sale": 15,
+      "size": "50ml",
+      "total_price": 672,
+      "nm_id": 9876543,
+      "brand": "Fragrance Co.",
+      "status": 201
+    },
+    {
+      "chrt_id": 9876543,
+      "track_number": "WB9876543",
+      "price": 599,
+      "rid": "ef9876543ab12345",
+      "name": "Lipstick",
+      "sale": 10,
+      "size": "2g",
+      "total_price": 539,
+      "nm_id": 1234567,
+      "brand": "Luxe Cosmetics",
+      "status": 203
+    }
+  ],
+  "locale": "en",
+  "internal_signature": "q",
+  "customer_id": "w",
+  "delivery_service": "e",
+  "shardkey": "9",
+  "sm_id":11 ,
+  "date_created": "2021-11-26T06:22:19Z",
+  "oof_shard": "w"
+}

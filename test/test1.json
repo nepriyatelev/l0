@@ -1,0 +1,62 @@
+{
+  "order_uid": "newOrderUID123",
+  "track_number": "NEWTRACKNUMBER",
+  "entry": "NEWENTRY",
+  "delivery": {
+    "name": "John Doe",
+    "phone": "+1234567890",
+    "zip": "123456",
+    "city": "New City",
+    "address": "123 Main Street",
+    "region": "State",
+    "email": "johndoe@example.com"
+  },
+  "payment": {
+    "transaction": "newOrderUID123",
+    "request_id": "newRequest123",
+    "currency": "EUR",
+    "provider": "newprovider",
+    "amount": 2000,
+    "payment_dt": 1666666666,
+    "bank": "beta",
+    "delivery_cost": 2000,
+    "goods_total": 400,
+    "custom_fee": 100
+  },
+  "items": [
+    {
+      "chrt_id": 987654,
+      "track_number": "NEWTRACKNUMBER",
+      "price": 789,
+      "rid": "newrid123",
+      "name": "Lipstick",
+      "sale": 10,
+      "size": "1",
+      "total_price": 710,
+      "nm_id": 567890,
+      "brand": "Revlon",
+      "status": 301
+    },
+    {
+      "chrt_id": 543210,
+      "track_number": "NEWTRACKNUMBER",
+      "price": 1299,
+      "rid": "newrid456",
+      "name": "Foundation",
+      "sale": 15,
+      "size": "2",
+      "total_price": 1104,
+      "nm_id": 123456,
+      "brand": "Maybelline",
+      "status": 302
+    }
+  ],
+  "locale": "fr",
+  "internal_signature": "newSignature123",
+  "customer_id": "newCustomerID",
+  "delivery_service": "newService",
+  "shardkey": "123",
+  "sm_id": 100,
+  "date_created": "2023-09-11T12:34:56Z",
+  "oof_shard": "2"
+}
