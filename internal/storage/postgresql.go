@@ -127,7 +127,6 @@ func (s *PostgresStorage) SaveOrder(order models.Order) error {
 						goods_total,
 						custom_fee)
 						VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
-		//order.OrderUID,
 		order.Payment.Transaction,
 		order.Payment.RequestID,
 		order.Payment.Currency,
